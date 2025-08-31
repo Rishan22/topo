@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tsscan"
+version = "0.1.0"
+description = "Topological skeleton scanner for repos (no inside/outside cut)."
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "Your Name"}]
+requires-python = ">=3.10"
+dependencies = [
+  "typer>=0.12.3",
+  "rich>=13.7.1",
+  "networkx>=3.4,<3.5",
+  "pydantic>=2.8.2",
+  "graphviz>=0.20.3",
+  "requests>=2.32.3",
+  "GitPython>=3.1.43",
+  "fastapi>=0.115.0",
+  "uvicorn>=0.30.5",
+  "jinja2>=3.1.4",
+]
+
+[project.scripts]
+tsscan = "tsscan.cli:app"
